@@ -1,3 +1,8 @@
+* acho que nao uso a imagem smallsub
+
+
+---
+
 [ok] dinamica de movimento do tubarao e mergulhador
 
 [ok] choque com mergulhador

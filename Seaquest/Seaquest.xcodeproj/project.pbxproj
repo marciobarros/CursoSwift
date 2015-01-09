@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		970FAFDE1A3111B100C76339 /* Diver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 970FAFDD1A3111B100C76339 /* Diver.swift */; };
-		970FAFE01A31127F00C76339 /* Direction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 970FAFDF1A31127F00C76339 /* Direction.swift */; };
 		974CE0371A606BD700786A8F /* button-09.wav in Resources */ = {isa = PBXBuildFile; fileRef = 974CE0351A606BD700786A8F /* button-09.wav */; };
 		974CE0381A606BD700786A8F /* button-10.wav in Resources */ = {isa = PBXBuildFile; fileRef = 974CE0361A606BD700786A8F /* button-10.wav */; };
 		97DA8F141A5B0611009534FE /* TODO.txt in Resources */ = {isa = PBXBuildFile; fileRef = 97DA8F131A5B0611009534FE /* TODO.txt */; };
@@ -36,7 +35,6 @@
 
 /* Begin PBXFileReference section */
 		970FAFDD1A3111B100C76339 /* Diver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Diver.swift; sourceTree = "<group>"; };
-		970FAFDF1A31127F00C76339 /* Direction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Direction.swift; sourceTree = "<group>"; };
 		974CE0351A606BD700786A8F /* button-09.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "button-09.wav"; sourceTree = "<group>"; };
 		974CE0361A606BD700786A8F /* button-10.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "button-10.wav"; sourceTree = "<group>"; };
 		97DA8F131A5B0611009534FE /* TODO.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TODO.txt; sourceTree = "<group>"; };
@@ -74,15 +72,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		970FAFE11A31150600C76339 /* model */ = {
-			isa = PBXGroup;
-			children = (
-				970FAFDF1A31127F00C76339 /* Direction.swift */,
-				970FAFDD1A3111B100C76339 /* Diver.swift */,
-			);
-			name = model;
-			sourceTree = "<group>";
-		};
 		974CE0341A606BD700786A8F /* sounds */ = {
 			isa = PBXGroup;
 			children = (
@@ -116,8 +105,8 @@
 			isa = PBXGroup;
 			children = (
 				974CE0341A606BD700786A8F /* sounds */,
-				970FAFE11A31150600C76339 /* model */,
 				97E4B9941A2660FF006203A5 /* AppDelegate.swift */,
+				970FAFDD1A3111B100C76339 /* Diver.swift */,
 				97E4B9961A2660FF006203A5 /* GameScene.sks */,
 				97E4B9981A2660FF006203A5 /* GameScene.swift */,
 				97E4B9BA1A266CBC006203A5 /* PlayScene.swift */,
@@ -259,7 +248,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				970FAFE01A31127F00C76339 /* Direction.swift in Sources */,
 				97E4B9991A2660FF006203A5 /* GameScene.swift in Sources */,
 				97E4B9BB1A266CBC006203A5 /* PlayScene.swift in Sources */,
 				97E4B9B91A2669B9006203A5 /* UIColor.swift in Sources */,

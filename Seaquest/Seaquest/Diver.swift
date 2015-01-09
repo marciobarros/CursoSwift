@@ -7,8 +7,12 @@
 //
 
 import Foundation
-
 import SpriteKit
+
+enum Direction : Int {
+    case Right = 1
+    case Left = -1
+}
 
 class Diver {
     
