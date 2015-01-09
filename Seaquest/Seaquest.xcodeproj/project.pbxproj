@@ -12,7 +12,6 @@
 		974CE0381A606BD700786A8F /* button-10.wav in Resources */ = {isa = PBXBuildFile; fileRef = 974CE0361A606BD700786A8F /* button-10.wav */; };
 		97DA8F141A5B0611009534FE /* TODO.txt in Resources */ = {isa = PBXBuildFile; fileRef = 97DA8F131A5B0611009534FE /* TODO.txt */; };
 		97E4B9951A2660FF006203A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97E4B9941A2660FF006203A5 /* AppDelegate.swift */; };
-		97E4B9971A2660FF006203A5 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 97E4B9961A2660FF006203A5 /* GameScene.sks */; };
 		97E4B9991A2660FF006203A5 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97E4B9981A2660FF006203A5 /* GameScene.swift */; };
 		97E4B99B1A2660FF006203A5 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97E4B99A1A2660FF006203A5 /* GameViewController.swift */; };
 		97E4B99E1A2660FF006203A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97E4B99C1A2660FF006203A5 /* Main.storyboard */; };
@@ -41,7 +40,6 @@
 		97E4B98F1A2660FF006203A5 /* Seaquest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Seaquest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		97E4B9931A2660FF006203A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		97E4B9941A2660FF006203A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		97E4B9961A2660FF006203A5 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 		97E4B9981A2660FF006203A5 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		97E4B99A1A2660FF006203A5 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		97E4B99D1A2660FF006203A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -107,7 +105,6 @@
 				974CE0341A606BD700786A8F /* sounds */,
 				97E4B9941A2660FF006203A5 /* AppDelegate.swift */,
 				970FAFDD1A3111B100C76339 /* Diver.swift */,
-				97E4B9961A2660FF006203A5 /* GameScene.sks */,
 				97E4B9981A2660FF006203A5 /* GameScene.swift */,
 				97E4B9BA1A266CBC006203A5 /* PlayScene.swift */,
 				97E4B99A1A2660FF006203A5 /* GameViewController.swift */,
@@ -229,7 +226,6 @@
 				974CE0371A606BD700786A8F /* button-09.wav in Resources */,
 				97E4B9A31A2660FF006203A5 /* LaunchScreen.xib in Resources */,
 				97E4B9A01A2660FF006203A5 /* Images.xcassets in Resources */,
-				97E4B9971A2660FF006203A5 /* GameScene.sks in Resources */,
 				97E4B99E1A2660FF006203A5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
