@@ -25,9 +25,14 @@ class GameScene: SKScene {
             
             if self.nodeAtPoint(location) == self.startLabel {
                 let skView = self.view as SKView!
-                var scene = PlayScene(size: self.size)
+				
+				var scene = PlayScene(size: self.size)
                 scene.scaleMode = .ResizeFill
                 scene.size = skView.bounds.size
+
+				//skView.showsFPS = true
+				//skView.showsNodeCount = true
+				//skView.showsPhysics = true
                 skView.presentScene(scene)
             }
         }
