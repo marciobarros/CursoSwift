@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9744F40D1A798AB500864DA1 /* StarfieldLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9744F40C1A798AB500864DA1 /* StarfieldLayer.swift */; };
+		978D7DF71A79A5F6006E01A5 /* Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978D7DF61A79A5F6006E01A5 /* Random.swift */; };
 		97C2B1A91A7260A5000EE9E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C2B1A81A7260A5000EE9E6 /* AppDelegate.swift */; };
 		97C2B1AB1A7260A5000EE9E6 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 97C2B1AA1A7260A5000EE9E6 /* GameScene.sks */; };
 		97C2B1AD1A7260A5000EE9E6 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C2B1AC1A7260A5000EE9E6 /* GameScene.swift */; };
@@ -20,6 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9744F40C1A798AB500864DA1 /* StarfieldLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarfieldLayer.swift; sourceTree = "<group>"; };
+		978D7DF61A79A5F6006E01A5 /* Random.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Random.swift; sourceTree = "<group>"; };
 		97C2B1A31A7260A5000EE9E6 /* PGP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PGP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		97C2B1A71A7260A5000EE9E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		97C2B1A81A7260A5000EE9E6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +82,8 @@
 				97C2B1AA1A7260A5000EE9E6 /* GameScene.sks */,
 				97C2B1AC1A7260A5000EE9E6 /* GameScene.swift */,
 				97DF3A601A7264FB00D7C5A0 /* PlayScene.swift */,
+				9744F40C1A798AB500864DA1 /* StarfieldLayer.swift */,
+				978D7DF61A79A5F6006E01A5 /* Random.swift */,
 				97C2B1AE1A7260A5000EE9E6 /* GameViewController.swift */,
 				97C2B1B01A7260A5000EE9E6 /* Main.storyboard */,
 				97C2B1B31A7260A5000EE9E6 /* Images.xcassets */,
@@ -196,6 +202,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				978D7DF71A79A5F6006E01A5 /* Random.swift in Sources */,
+				9744F40D1A798AB500864DA1 /* StarfieldLayer.swift in Sources */,
 				97C2B1AD1A7260A5000EE9E6 /* GameScene.swift in Sources */,
 				97DF3A631A7284E900D7C5A0 /* Point.swift in Sources */,
 				97C2B1AF1A7260A5000EE9E6 /* GameViewController.swift in Sources */,

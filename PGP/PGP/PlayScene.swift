@@ -11,83 +11,51 @@ import SpriteKit
 
 class PlayScene: SKScene {
 	var upwardWall = Path()
-	var downwardWall = Path()
-	var upwardWallDrawing : SKShapeNode!
-	var downwardWallDrawing : SKShapeNode!
-	var lastPosition: CGPoint!
-	var lastHeight : Float = 0.0
+	var upwardWallDrawing : SKSpriteNode!
+	var lastPosition = CGFloat(0)
+	var tunnelLayer = CAShapeLayer()
+	var starfieldLayer = StarfieldLayer()
 
     override func didMoveToView(view: SKView) {
-		backgroundColor = UIColor.whiteColor()
+		backgroundColor = UIColor.blackColor()
+
+		tunnelLayer.frame = CGRectInset(view.frame, 0, 0)
+		tunnelLayer.anchorPointZ = 10
+		tunnelLayer.strokeColor = UIColor.whiteColor().CGColor
+		tunnelLayer.fillColor = UIColor.blackColor().CGColor
+		self.view?.layer.addSublayer(tunnelLayer)
+		
+		starfieldLayer.frame = CGRectInset(view.frame, 0, 0)
+		starfieldLayer.anchorPointZ = 20
+		starfieldLayer.addStarfield(50, color: UIColor.whiteColor().CGColor, speed: 5.0)
+		starfieldLayer.addStarfield(33, color: UIColor.yellowColor().CGColor, speed: 3.0)
+		starfieldLayer.addStarfield(15, color: UIColor.redColor().CGColor, speed: 1.0)
+		view.layer.addSublayer(starfieldLayer)
+	
+		createInitialPath()
 		drawMovingWalls()
     }
 	
 	func drawMovingWalls() {
-		upwardWallDrawing = SKShapeNode()
-		upwardWallDrawing.strokeColor = UIColor.blackColor()
-		upwardWallDrawing.lineWidth = 4
-		self.addChild(upwardWallDrawing)
-		
-		downwardWallDrawing = SKShapeNode()
-		downwardWallDrawing.strokeColor = UIColor.blackColor()
-		downwardWallDrawing.lineWidth = 4
-		self.addChild(downwardWallDrawing)
-		
-		createInitialPath()
+		tunnelLayer.path = upwardWall.getMutablePath()
 	}
 	
 	func createInitialPath() {
-		lastPosition = CGPointMake(frame.minX, CGRectGetMidY(frame))
-		lastHeight = 100.0
+		lastPosition = tunnelLayer.bounds.midY
 		
-		for (var x = frame.minX; x <= frame.maxX; x += 4)
+		for (var x : CGFloat = 0.0; x <= tunnelLayer.bounds.maxX; x += 4)
 		{
-			var y = lastPosition.y + CGFloat(random() * 10.0 - 5.0)
-			lastHeight += random() * 10.0 - 5.0
-			
-			if (lastHeight > 200) {
-				lastHeight = 200
-			}
-			
-			if (lastHeight < 40) {
-				lastHeight = 40
-			}
-			
-			lastPosition = CGPointMake(x, y)
-			upwardWall.add(x, y: y)
-			downwardWall.add(x, y: y - CGFloat(lastHeight))
+			lastPosition = lastPosition + CGFloat(random() * 10.0 - 5.0)
+			upwardWall.add(x, y: lastPosition)
 		}
-		
-		updateWalls()
-	}
-	
-	func updateWalls() {
-		updateWall(upwardWall, shape: upwardWallDrawing)
-		updateWall(downwardWall, shape: downwardWallDrawing)
-	}
-	
-	func updateWall(path: Path, shape: SKShapeNode) {
-		shape.removeFromParent()
-		shape.path = path.getMutablePath()
-		shape.strokeColor = UIColor.blackColor()
-		shape.lineWidth = 4
-		self.addChild(shape)
 	}
 	
 	func shiftWalls() {
-		var y = lastPosition.y + CGFloat(random() * 10.0 - 5.0)
-		lastHeight += random() * 10.0 - 5.0
-		
+		lastPosition = max(min(lastPosition + CGFloat(random() * 10.0 - 5.0), tunnelLayer.bounds.midY + 30), tunnelLayer.bounds.midY - 160)
 		upwardWall.removeFirst()
 		upwardWall.shift(-4.0, dy: 0.0)
-		upwardWall.add(lastPosition.x + 4, y: y)
-		
-		downwardWall.removeFirst()
-		downwardWall.shift(-4.0, dy: 0.0)
-		downwardWall.add(lastPosition.x + 4, y: y - CGFloat(lastHeight))
-		
-		lastPosition = CGPointMake(lastPosition.x + 4.0, y)
-		updateWalls()
+		upwardWall.add(tunnelLayer.bounds.maxX + 4, y: lastPosition)
+		drawMovingWalls()
 	}
 	
 	/*
@@ -106,5 +74,6 @@ class PlayScene: SKScene {
 	
 	override func update(currentTime: NSTimeInterval) {
 		shiftWalls()
+		starfieldLayer.update()
 	}
 }

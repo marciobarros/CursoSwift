@@ -41,6 +41,10 @@ class Path {
 			CGPathAddLineToPoint(path, nil, points[i].x, points[i].y)
 		}
 		
+		for (var i = points.count-1; i >= 0; i--) {
+			CGPathAddLineToPoint(path, nil, points[i].x, points[i].y + 100.0)
+		}
+		
 		return path
 	}
 }
