@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9744F40D1A798AB500864DA1 /* StarfieldNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9744F40C1A798AB500864DA1 /* StarfieldNode.swift */; };
 		978D7DF71A79A5F6006E01A5 /* Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978D7DF61A79A5F6006E01A5 /* Random.swift */; };
 		97C2B1A91A7260A5000EE9E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C2B1A81A7260A5000EE9E6 /* AppDelegate.swift */; };
 		97C2B1AD1A7260A5000EE9E6 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C2B1AC1A7260A5000EE9E6 /* GameScene.swift */; };
@@ -15,14 +14,11 @@
 		97C2B1B21A7260A5000EE9E6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97C2B1B01A7260A5000EE9E6 /* Main.storyboard */; };
 		97C2B1B41A7260A5000EE9E6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97C2B1B31A7260A5000EE9E6 /* Images.xcassets */; };
 		97C2B1B71A7260A5000EE9E6 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 97C2B1B51A7260A5000EE9E6 /* LaunchScreen.xib */; };
-		97C92D431A7A4F29001F496E /* TunnelNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C92D421A7A4F29001F496E /* TunnelNode.swift */; };
-		97C92D471A7ACD6C001F496E /* button-09.wav in Resources */ = {isa = PBXBuildFile; fileRef = 97C92D451A7ACD6C001F496E /* button-09.wav */; };
 		97C92D481A7ACD6C001F496E /* button-10.wav in Resources */ = {isa = PBXBuildFile; fileRef = 97C92D461A7ACD6C001F496E /* button-10.wav */; };
 		97DF3A611A7264FB00D7C5A0 /* PlayScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97DF3A601A7264FB00D7C5A0 /* PlayScene.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		9744F40C1A798AB500864DA1 /* StarfieldNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarfieldNode.swift; sourceTree = "<group>"; };
 		978D7DF61A79A5F6006E01A5 /* Random.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Random.swift; sourceTree = "<group>"; };
 		97C2B1A31A7260A5000EE9E6 /* PGP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PGP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		97C2B1A71A7260A5000EE9E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -33,8 +29,6 @@
 		97C2B1B31A7260A5000EE9E6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		97C2B1B61A7260A5000EE9E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		97C2B1BC1A7260A5000EE9E6 /* PGPTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PGPTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		97C92D421A7A4F29001F496E /* TunnelNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TunnelNode.swift; sourceTree = "<group>"; };
-		97C92D451A7ACD6C001F496E /* button-09.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "button-09.wav"; sourceTree = "<group>"; };
 		97C92D461A7ACD6C001F496E /* button-10.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "button-10.wav"; sourceTree = "<group>"; };
 		97DF3A601A7264FB00D7C5A0 /* PlayScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayScene.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -82,8 +76,6 @@
 				97C2B1AC1A7260A5000EE9E6 /* GameScene.swift */,
 				97DF3A601A7264FB00D7C5A0 /* PlayScene.swift */,
 				97C92D441A7ACD6C001F496E /* sounds */,
-				9744F40C1A798AB500864DA1 /* StarfieldNode.swift */,
-				97C92D421A7A4F29001F496E /* TunnelNode.swift */,
 				978D7DF61A79A5F6006E01A5 /* Random.swift */,
 				97C2B1AE1A7260A5000EE9E6 /* GameViewController.swift */,
 				97C2B1B01A7260A5000EE9E6 /* Main.storyboard */,
@@ -105,7 +97,6 @@
 		97C92D441A7ACD6C001F496E /* sounds */ = {
 			isa = PBXGroup;
 			children = (
-				97C92D451A7ACD6C001F496E /* button-09.wav */,
 				97C92D461A7ACD6C001F496E /* button-10.wav */,
 			);
 			path = sounds;
@@ -193,7 +184,6 @@
 				97C2B1B41A7260A5000EE9E6 /* Images.xcassets in Resources */,
 				97C92D481A7ACD6C001F496E /* button-10.wav in Resources */,
 				97C2B1B21A7260A5000EE9E6 /* Main.storyboard in Resources */,
-				97C92D471A7ACD6C001F496E /* button-09.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -211,9 +201,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				97C92D431A7A4F29001F496E /* TunnelNode.swift in Sources */,
 				978D7DF71A79A5F6006E01A5 /* Random.swift in Sources */,
-				9744F40D1A798AB500864DA1 /* StarfieldNode.swift in Sources */,
 				97C2B1AD1A7260A5000EE9E6 /* GameScene.swift in Sources */,
 				97C2B1AF1A7260A5000EE9E6 /* GameViewController.swift in Sources */,
 				97DF3A611A7264FB00D7C5A0 /* PlayScene.swift in Sources */,
