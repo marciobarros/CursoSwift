@@ -10,7 +10,7 @@ import Foundation
 import SpriteKit
 
 //
-// Custom layer the presents a parallax scrolling starfield
+// Custom layer that presents a parallax scrolling starfield
 //
 class StarfieldLayer : CALayer {
 	var starfields : [Starfield] = []
