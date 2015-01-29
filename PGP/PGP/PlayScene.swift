@@ -239,7 +239,9 @@ class PlayScene: SKScene {
 		gamePaused = true
 		spaceshipNode.removeAllActions()
 		spaceshipNode.physicsBody?.dynamic = false
+		
 		spaceshipNode.runAction(SKAction.fadeOutWithDuration(1))
+		runAction(SKAction.playSoundFileNamed("button-10.wav", waitForCompletion: true))
 		
 		var alert = UIAlertController(title: "Game Over", message: "", preferredStyle: UIAlertControllerStyle.Alert)
 		
