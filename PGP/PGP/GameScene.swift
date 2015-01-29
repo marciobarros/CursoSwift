@@ -28,10 +28,10 @@ class GameScene: SKScene {
 		let skView = self.view as SKView!
 		//skView.showsFPS = true
 		//skView.showsNodeCount = true
-		//skView.showsPhysics = true
+		skView.showsPhysics = true
 		
-		var scene = PlayScene(size: self.size)
-		scene.scaleMode = .ResizeFill
+		var scene = PlayScene(size: skView.bounds.size)
+		scene.scaleMode = .AspectFill
 		skView.presentScene(scene)
     }
 }

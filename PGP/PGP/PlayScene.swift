@@ -10,40 +10,47 @@ import Foundation
 import SpriteKit
 
 class PlayScene: SKScene {
-	var tunnelLayer = TunnelLayer()
-	var starfieldLayer = StarfieldLayer()
-	var spaceship = SKSpriteNode(imageNamed: "Spaceship")
+	var tunnelNode : TunnelNode!
+	var starfieldNode : ParallaxStarfieldNode!
+	var spaceshipNode : SKSpriteNode!
 
     override func didMoveToView(view: SKView) {
 		backgroundColor = UIColor.blackColor()
+		physicsWorld.gravity = CGVectorMake(0.0, 0.0)
+
 		createStarfield(view)
 		createTunnel(view)
 		createSpaceship()
     }
 	
 	func createStarfield(view: SKView) {
-		starfieldLayer.frame = CGRectInset(view.frame, 0, 0)
-		starfieldLayer.zPosition = 0
-		starfieldLayer.addStarfield(50, color: UIColor.whiteColor().CGColor, speed: 5.0)
-		starfieldLayer.addStarfield(33, color: UIColor.yellowColor().CGColor, speed: 3.0)
-		starfieldLayer.addStarfield(15, color: UIColor.redColor().CGColor, speed: 1.0)
-		view.layer.addSublayer(starfieldLayer)
+		starfieldNode = ParallaxStarfieldNode(size: view.bounds.size)
+		starfieldNode.zPosition = 0
+		starfieldNode.addStarfield(50, color: UIColor.whiteColor(), speed: 5.0)
+		starfieldNode.addStarfield(33, color: UIColor.yellowColor(), speed: 3.0)
+		starfieldNode.addStarfield(15, color: UIColor.redColor(), speed: 1.0)
+		self.addChild(starfieldNode)
 	}
 	
 	func createTunnel(view: SKView) {
-		tunnelLayer.frame = CGRectInset(view.frame, 0, 0)
-		tunnelLayer.zPosition = 10
-		tunnelLayer.createInitialTunnel()
-		self.view?.layer.addSublayer(tunnelLayer)
+		tunnelNode = TunnelNode(size: view.bounds.size)
+		tunnelNode.zPosition = 10
+		tunnelNode.createInitialTunnel()
+		self.addChild(tunnelNode)
 	}
 	
 	func createSpaceship() {
-		spaceship.anchorPoint = CGPointMake(0, 0.5)
-		spaceship.position = CGPointMake(5.0, frame.midY)
-		spaceship.xScale = 0.1
-		spaceship.yScale = 0.1
-		spaceship.zPosition = 20
-		self.addChild(spaceship)
+		spaceshipNode = SKSpriteNode(imageNamed: "Spaceship")
+		spaceshipNode.anchorPoint = CGPointMake(0, 0.5)
+		spaceshipNode.position = CGPointMake(5.0, frame.midY)
+		spaceshipNode.setScale(0.05)
+		spaceshipNode.zRotation = CGFloat(-M_PI_2)
+		spaceshipNode.zPosition = 20
+		self.addChild(spaceshipNode)
+		
+		var center = CGPointMake(spaceshipNode.frame.width * (0.5 - spaceshipNode.anchorPoint.x), spaceshipNode.frame.height * (0.5 - spaceshipNode.anchorPoint.y))
+		var borderBody = SKPhysicsBody(circleOfRadius: spaceshipNode.frame.width / 2, center: center)
+		spaceshipNode.physicsBody = borderBody
 	}
 	
     override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
@@ -54,7 +61,7 @@ class PlayScene: SKScene {
     }
 	
 	override func update(currentTime: NSTimeInterval) {
-		tunnelLayer.update()
-		starfieldLayer.update()
+		tunnelNode.update()
+		starfieldNode.update()
 	}
 }

@@ -1,5 +1,5 @@
 //
-//  StarfieldLayer.swift
+//  TunnelNode.swift
 //  PGP
 //
 //  Created by Marcio Barros on 1/28/15.
@@ -9,51 +9,50 @@
 import SpriteKit
 
 //
-// Custom layer that presents a scrolling tunnel
+// Custom shape node that presents a scrolling tunnel
 //
-class TunnelLayer : CAShapeLayer {
+class TunnelNode : SKShapeNode {
 	let INCREMENT = CGFloat(8)
 	var tunnel = TunnelPath()
 	var lastY = CGFloat(0)
+	var size : CGSize!
 	
-	// Required standard initializer for layers
-	required init(coder aDecoder: NSCoder) {
+	// Required standard initializer for nodes
+	required init?(coder aDecoder: NSCoder) {
 		super.init(coder: aDecoder)
-		self.strokeColor = UIColor.whiteColor().CGColor
-		self.fillColor = UIColor.blackColor().CGColor
 	}
 	
-	// Standard initializer for layers with no parameter
-	override init() {
+	// Initializes the node to a given size
+	required init(size: CGSize) {
 		super.init()
-		self.strokeColor = UIColor.whiteColor().CGColor
-		self.fillColor = UIColor.blackColor().CGColor
+		self.size = size
 	}
 	
 	// Create an initial, random tunnel
 	func createInitialTunnel() {
-		lastY = self.bounds.midY - 50.0
+		lastY = size.height / 2 - 50.0
 		
-		for (var x : CGFloat = 0.0; x <= self.bounds.maxX; x += INCREMENT)
+		for (var x : CGFloat = 0.0; x <= size.width; x += INCREMENT)
 		{
 			lastY = nextPosition()
 			tunnel.add(x, y: lastY)
 		}
 		
-		tunnel.add(self.bounds.maxX + INCREMENT, y: lastY)
+		tunnel.add(size.width + INCREMENT, y: lastY)
+		self.strokeColor = UIColor.whiteColor()
+		self.fillColor = UIColor.blackColor()
 		self.path = tunnel.getPath()
-		setNeedsDisplay()
 	}
 
 	// Grabs the next position for the tunnel
 	func nextPosition() -> CGFloat {
 		var y = lastY + CGFloat.random() * 10.0 - 5.0
 		
-		if y < self.bounds.minY + 30 {
-			y = self.bounds.minY + 30
+		if y < 30 {
+			y = 30
 		}
-		else if y > self.bounds.maxY - 130 {
-			y = self.bounds.maxY - 130
+		else if y > size.height - 130 {
+			y = size.height - 130
 		}
 		
 		return y
@@ -64,9 +63,8 @@ class TunnelLayer : CAShapeLayer {
 		lastY = nextPosition()
 		tunnel.removeFirst()
 		tunnel.shift(-INCREMENT, dy: 0.0)
-		tunnel.add(self.bounds.maxX + INCREMENT, y: lastY)
+		tunnel.add(size.width + INCREMENT, y: lastY)
 		self.path = tunnel.getPath()
-		setNeedsDisplay()
 	}
 }
 
