@@ -13,10 +13,11 @@ class PlayScene: SKScene {
 	var tunnelNode : TunnelNode!
 	var starfieldNode : ParallaxStarfieldNode!
 	var spaceshipNode : SKSpriteNode!
+	var preparingToChange = false
 
     override func didMoveToView(view: SKView) {
 		backgroundColor = UIColor.blackColor()
-		physicsWorld.gravity = CGVectorMake(0.0, 0.0)
+		physicsWorld.gravity = CGVectorMake(0.0, 0.1)
 
 		createStarfield(view)
 		createTunnel(view)
@@ -42,7 +43,7 @@ class PlayScene: SKScene {
 	func createSpaceship() {
 		spaceshipNode = SKSpriteNode(imageNamed: "Spaceship")
 		spaceshipNode.anchorPoint = CGPointMake(0, 0.5)
-		spaceshipNode.position = CGPointMake(5.0, frame.midY)
+		spaceshipNode.position = CGPointMake(10.0, frame.midY)
 		spaceshipNode.setScale(0.05)
 		spaceshipNode.zRotation = CGFloat(-M_PI_2)
 		spaceshipNode.zPosition = 20
@@ -54,14 +55,38 @@ class PlayScene: SKScene {
 	}
 	
     override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
-//        for touch: AnyObject in touches {
-//            let location = touch.locationInNode(self)
-//            
-//        }
+        for touch: AnyObject in touches {
+            let location = touch.locationInNode(self)
+
+			if (location.y < spaceshipNode.position.y) {
+				spaceshipNode.physicsBody?.applyImpulse(CGVectorMake(0.0, -1.0))
+			}
+			else if (location.y > spaceshipNode.position.y) {
+				spaceshipNode.physicsBody?.applyImpulse(CGVectorMake(0.0, 1.0))
+			}
+        }
     }
 	
 	override func update(currentTime: NSTimeInterval) {
 		tunnelNode.update()
 		starfieldNode.update()
+		
+		if CGFloat.random() < 0.05 && !preparingToChange {
+			backgroundColor = UIColor.redColor()
+			let this = self
+			
+			var interval = CFTimeInterval(2.0)
+			let diverWait = SKAction.waitForDuration(interval)
+			preparingToChange = true
+			
+			spaceshipNode.runAction(diverWait, completion: {
+				this.physicsWorld.gravity = CGVectorMake(0.0, CGFloat.random() * 0.5)
+				this.spaceshipNode.physicsBody?.friction = CGFloat.random() * 0.5
+				this.spaceshipNode.physicsBody?.linearDamping = CGFloat.random() * 0.5
+				this.starfieldNode.verticalGravity = this.physicsWorld.gravity.dy
+				this.backgroundColor = UIColor.blackColor()
+				this.preparingToChange = false
+			});
+		}
 	}
 }
