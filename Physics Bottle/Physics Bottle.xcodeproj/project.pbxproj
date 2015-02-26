@@ -7,48 +7,52 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		97DBF8601A9F9C010004487C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97DBF85F1A9F9C010004487C /* AppDelegate.swift */; };
-		97DBF8641A9F9C010004487C /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97DBF8631A9F9C010004487C /* GameScene.swift */; };
-		97DBF8661A9F9C010004487C /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97DBF8651A9F9C010004487C /* GameViewController.swift */; };
-		97DBF8691A9F9C010004487C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97DBF8671A9F9C010004487C /* Main.storyboard */; };
-		97DBF86B1A9F9C010004487C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97DBF86A1A9F9C010004487C /* Images.xcassets */; };
-		97DBF86E1A9F9C010004487C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 97DBF86C1A9F9C010004487C /* LaunchScreen.xib */; };
-		97DBF8861A9F9E230004487C /* ball.png in Resources */ = {isa = PBXBuildFile; fileRef = 97DBF8841A9F9E230004487C /* ball.png */; };
-		97DBF8871A9F9E230004487C /* bottle.png in Resources */ = {isa = PBXBuildFile; fileRef = 97DBF8851A9F9E230004487C /* bottle.png */; };
+		97D421971A9FA47700E9C55E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D421961A9FA47700E9C55E /* AppDelegate.swift */; };
+		97D4219B1A9FA47700E9C55E /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D4219A1A9FA47700E9C55E /* GameScene.swift */; };
+		97D4219D1A9FA47700E9C55E /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D4219C1A9FA47700E9C55E /* GameViewController.swift */; };
+		97D421A01A9FA47700E9C55E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97D4219E1A9FA47700E9C55E /* Main.storyboard */; };
+		97D421A21A9FA47700E9C55E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97D421A11A9FA47700E9C55E /* Images.xcassets */; };
+		97D421A51A9FA47700E9C55E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 97D421A31A9FA47700E9C55E /* LaunchScreen.xib */; };
+		97D421B11A9FA47700E9C55E /* Physics_BottleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D421B01A9FA47700E9C55E /* Physics_BottleTests.swift */; };
+		97D421BD1A9FA4C200E9C55E /* ball.png in Resources */ = {isa = PBXBuildFile; fileRef = 97D421BB1A9FA4C200E9C55E /* ball.png */; };
+		97D421BE1A9FA4C200E9C55E /* bottle.png in Resources */ = {isa = PBXBuildFile; fileRef = 97D421BC1A9FA4C200E9C55E /* bottle.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		97DBF8741A9F9C010004487C /* PBXContainerItemProxy */ = {
+		97D421AB1A9FA47700E9C55E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 97DBF8521A9F9C010004487C /* Project object */;
+			containerPortal = 97D421891A9FA47700E9C55E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 97DBF8591A9F9C010004487C;
+			remoteGlobalIDString = 97D421901A9FA47700E9C55E;
 			remoteInfo = "Physics Bottle";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		97DBF85A1A9F9C010004487C /* Physics Bottle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Physics Bottle.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		97DBF85E1A9F9C010004487C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		97DBF85F1A9F9C010004487C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		97DBF8631A9F9C010004487C /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
-		97DBF8651A9F9C010004487C /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
-		97DBF8681A9F9C010004487C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		97DBF86A1A9F9C010004487C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		97DBF86D1A9F9C010004487C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		97DBF8841A9F9E230004487C /* ball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ball.png; sourceTree = "<group>"; };
-		97DBF8851A9F9E230004487C /* bottle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bottle.png; sourceTree = "<group>"; };
+		97D421911A9FA47700E9C55E /* Physics Bottle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Physics Bottle.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		97D421951A9FA47700E9C55E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		97D421961A9FA47700E9C55E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		97D4219A1A9FA47700E9C55E /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		97D4219C1A9FA47700E9C55E /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		97D4219F1A9FA47700E9C55E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		97D421A11A9FA47700E9C55E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		97D421A41A9FA47700E9C55E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		97D421AA1A9FA47700E9C55E /* Physics BottleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Physics BottleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		97D421AF1A9FA47700E9C55E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		97D421B01A9FA47700E9C55E /* Physics_BottleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Physics_BottleTests.swift; sourceTree = "<group>"; };
+		97D421BB1A9FA4C200E9C55E /* ball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ball.png; sourceTree = "<group>"; };
+		97D421BC1A9FA4C200E9C55E /* bottle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bottle.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		97DBF8571A9F9C010004487C /* Frameworks */ = {
+		97D4218E1A9FA47700E9C55E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		97DBF8701A9F9C010004487C /* Frameworks */ = {
+		97D421A71A9FA47700E9C55E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -58,50 +62,69 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		97DBF8511A9F9C010004487C = {
+		97D421881A9FA47700E9C55E = {
 			isa = PBXGroup;
 			children = (
-				97DBF85C1A9F9C010004487C /* Physics Bottle */,
-				97DBF85B1A9F9C010004487C /* Products */,
+				97D421931A9FA47700E9C55E /* Physics Bottle */,
+				97D421AD1A9FA47700E9C55E /* Physics BottleTests */,
+				97D421921A9FA47700E9C55E /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		97DBF85B1A9F9C010004487C /* Products */ = {
+		97D421921A9FA47700E9C55E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				97DBF85A1A9F9C010004487C /* Physics Bottle.app */,
+				97D421911A9FA47700E9C55E /* Physics Bottle.app */,
+				97D421AA1A9FA47700E9C55E /* Physics BottleTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		97DBF85C1A9F9C010004487C /* Physics Bottle */ = {
+		97D421931A9FA47700E9C55E /* Physics Bottle */ = {
 			isa = PBXGroup;
 			children = (
-				97DBF8831A9F9E230004487C /* images */,
-				97DBF85F1A9F9C010004487C /* AppDelegate.swift */,
-				97DBF8631A9F9C010004487C /* GameScene.swift */,
-				97DBF8651A9F9C010004487C /* GameViewController.swift */,
-				97DBF8671A9F9C010004487C /* Main.storyboard */,
-				97DBF86A1A9F9C010004487C /* Images.xcassets */,
-				97DBF86C1A9F9C010004487C /* LaunchScreen.xib */,
-				97DBF85D1A9F9C010004487C /* Supporting Files */,
+				97D421BA1A9FA4C200E9C55E /* images */,
+				97D421961A9FA47700E9C55E /* AppDelegate.swift */,
+				97D4219A1A9FA47700E9C55E /* GameScene.swift */,
+				97D4219C1A9FA47700E9C55E /* GameViewController.swift */,
+				97D4219E1A9FA47700E9C55E /* Main.storyboard */,
+				97D421A11A9FA47700E9C55E /* Images.xcassets */,
+				97D421A31A9FA47700E9C55E /* LaunchScreen.xib */,
+				97D421941A9FA47700E9C55E /* Supporting Files */,
 			);
 			path = "Physics Bottle";
 			sourceTree = "<group>";
 		};
-		97DBF85D1A9F9C010004487C /* Supporting Files */ = {
+		97D421941A9FA47700E9C55E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				97DBF85E1A9F9C010004487C /* Info.plist */,
+				97D421951A9FA47700E9C55E /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		97DBF8831A9F9E230004487C /* images */ = {
+		97D421AD1A9FA47700E9C55E /* Physics BottleTests */ = {
 			isa = PBXGroup;
 			children = (
-				97DBF8841A9F9E230004487C /* ball.png */,
-				97DBF8851A9F9E230004487C /* bottle.png */,
+				97D421B01A9FA47700E9C55E /* Physics_BottleTests.swift */,
+				97D421AE1A9FA47700E9C55E /* Supporting Files */,
+			);
+			path = "Physics BottleTests";
+			sourceTree = "<group>";
+		};
+		97D421AE1A9FA47700E9C55E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				97D421AF1A9FA47700E9C55E /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		97D421BA1A9FA4C200E9C55E /* images */ = {
+			isa = PBXGroup;
+			children = (
+				97D421BB1A9FA4C200E9C55E /* ball.png */,
+				97D421BC1A9FA4C200E9C55E /* bottle.png */,
 			);
 			path = images;
 			sourceTree = "<group>";
@@ -109,13 +132,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		97DBF8591A9F9C010004487C /* Physics Bottle */ = {
+		97D421901A9FA47700E9C55E /* Physics Bottle */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 97DBF87D1A9F9C010004487C /* Build configuration list for PBXNativeTarget "Physics Bottle" */;
+			buildConfigurationList = 97D421B41A9FA47700E9C55E /* Build configuration list for PBXNativeTarget "Physics Bottle" */;
 			buildPhases = (
-				97DBF8561A9F9C010004487C /* Sources */,
-				97DBF8571A9F9C010004487C /* Frameworks */,
-				97DBF8581A9F9C010004487C /* Resources */,
+				97D4218D1A9FA47700E9C55E /* Sources */,
+				97D4218E1A9FA47700E9C55E /* Frameworks */,
+				97D4218F1A9FA47700E9C55E /* Resources */,
 			);
 			buildRules = (
 			);
@@ -123,27 +146,46 @@
 			);
 			name = "Physics Bottle";
 			productName = "Physics Bottle";
-			productReference = 97DBF85A1A9F9C010004487C /* Physics Bottle.app */;
+			productReference = 97D421911A9FA47700E9C55E /* Physics Bottle.app */;
 			productType = "com.apple.product-type.application";
+		};
+		97D421A91A9FA47700E9C55E /* Physics BottleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 97D421B71A9FA47700E9C55E /* Build configuration list for PBXNativeTarget "Physics BottleTests" */;
+			buildPhases = (
+				97D421A61A9FA47700E9C55E /* Sources */,
+				97D421A71A9FA47700E9C55E /* Frameworks */,
+				97D421A81A9FA47700E9C55E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				97D421AC1A9FA47700E9C55E /* PBXTargetDependency */,
+			);
+			name = "Physics BottleTests";
+			productName = "Physics BottleTests";
+			productReference = 97D421AA1A9FA47700E9C55E /* Physics BottleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		97DBF8521A9F9C010004487C /* Project object */ = {
+		97D421891A9FA47700E9C55E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = UNIRIO;
 				TargetAttributes = {
-					97DBF8591A9F9C010004487C = {
+					97D421901A9FA47700E9C55E = {
 						CreatedOnToolsVersion = 6.1.1;
 					};
-					97DBF8721A9F9C010004487C = {
+					97D421A91A9FA47700E9C55E = {
 						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = 97D421901A9FA47700E9C55E;
 					};
 				};
 			};
-			buildConfigurationList = 97DBF8551A9F9C010004487C /* Build configuration list for PBXProject "Physics Bottle" */;
+			buildConfigurationList = 97D4218C1A9FA47700E9C55E /* Build configuration list for PBXProject "Physics Bottle" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -151,30 +193,31 @@
 				en,
 				Base,
 			);
-			mainGroup = 97DBF8511A9F9C010004487C;
-			productRefGroup = 97DBF85B1A9F9C010004487C /* Products */;
+			mainGroup = 97D421881A9FA47700E9C55E;
+			productRefGroup = 97D421921A9FA47700E9C55E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				97DBF8591A9F9C010004487C /* Physics Bottle */,
+				97D421901A9FA47700E9C55E /* Physics Bottle */,
+				97D421A91A9FA47700E9C55E /* Physics BottleTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		97DBF8581A9F9C010004487C /* Resources */ = {
+		97D4218F1A9FA47700E9C55E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				97DBF86E1A9F9C010004487C /* LaunchScreen.xib in Resources */,
-				97DBF8861A9F9E230004487C /* ball.png in Resources */,
-				97DBF86B1A9F9C010004487C /* Images.xcassets in Resources */,
-				97DBF8871A9F9E230004487C /* bottle.png in Resources */,
-				97DBF8691A9F9C010004487C /* Main.storyboard in Resources */,
+				97D421A51A9FA47700E9C55E /* LaunchScreen.xib in Resources */,
+				97D421A21A9FA47700E9C55E /* Images.xcassets in Resources */,
+				97D421BD1A9FA4C200E9C55E /* ball.png in Resources */,
+				97D421A01A9FA47700E9C55E /* Main.storyboard in Resources */,
+				97D421BE1A9FA4C200E9C55E /* bottle.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		97DBF8711A9F9C010004487C /* Resources */ = {
+		97D421A81A9FA47700E9C55E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -184,46 +227,47 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		97DBF8561A9F9C010004487C /* Sources */ = {
+		97D4218D1A9FA47700E9C55E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				97DBF8641A9F9C010004487C /* GameScene.swift in Sources */,
-				97DBF8661A9F9C010004487C /* GameViewController.swift in Sources */,
-				97DBF8601A9F9C010004487C /* AppDelegate.swift in Sources */,
+				97D4219B1A9FA47700E9C55E /* GameScene.swift in Sources */,
+				97D4219D1A9FA47700E9C55E /* GameViewController.swift in Sources */,
+				97D421971A9FA47700E9C55E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		97DBF86F1A9F9C010004487C /* Sources */ = {
+		97D421A61A9FA47700E9C55E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				97D421B11A9FA47700E9C55E /* Physics_BottleTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		97DBF8751A9F9C010004487C /* PBXTargetDependency */ = {
+		97D421AC1A9FA47700E9C55E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 97DBF8591A9F9C010004487C /* Physics Bottle */;
-			targetProxy = 97DBF8741A9F9C010004487C /* PBXContainerItemProxy */;
+			target = 97D421901A9FA47700E9C55E /* Physics Bottle */;
+			targetProxy = 97D421AB1A9FA47700E9C55E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		97DBF8671A9F9C010004487C /* Main.storyboard */ = {
+		97D4219E1A9FA47700E9C55E /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				97DBF8681A9F9C010004487C /* Base */,
+				97D4219F1A9FA47700E9C55E /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		97DBF86C1A9F9C010004487C /* LaunchScreen.xib */ = {
+		97D421A31A9FA47700E9C55E /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				97DBF86D1A9F9C010004487C /* Base */,
+				97D421A41A9FA47700E9C55E /* Base */,
 			);
 			name = LaunchScreen.xib;
 			sourceTree = "<group>";
@@ -231,7 +275,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		97DBF87B1A9F9C010004487C /* Debug */ = {
+		97D421B21A9FA47700E9C55E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -273,7 +317,7 @@
 			};
 			name = Debug;
 		};
-		97DBF87C1A9F9C010004487C /* Release */ = {
+		97D421B31A9FA47700E9C55E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -308,7 +352,7 @@
 			};
 			name = Release;
 		};
-		97DBF87E1A9F9C010004487C /* Debug */ = {
+		97D421B51A9FA47700E9C55E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -318,7 +362,7 @@
 			};
 			name = Debug;
 		};
-		97DBF87F1A9F9C010004487C /* Release */ = {
+		97D421B61A9FA47700E9C55E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -328,28 +372,71 @@
 			};
 			name = Release;
 		};
+		97D421B81A9FA47700E9C55E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Physics BottleTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Physics Bottle.app/Physics Bottle";
+			};
+			name = Debug;
+		};
+		97D421B91A9FA47700E9C55E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Physics BottleTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Physics Bottle.app/Physics Bottle";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		97DBF8551A9F9C010004487C /* Build configuration list for PBXProject "Physics Bottle" */ = {
+		97D4218C1A9FA47700E9C55E /* Build configuration list for PBXProject "Physics Bottle" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				97DBF87B1A9F9C010004487C /* Debug */,
-				97DBF87C1A9F9C010004487C /* Release */,
+				97D421B21A9FA47700E9C55E /* Debug */,
+				97D421B31A9FA47700E9C55E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		97DBF87D1A9F9C010004487C /* Build configuration list for PBXNativeTarget "Physics Bottle" */ = {
+		97D421B41A9FA47700E9C55E /* Build configuration list for PBXNativeTarget "Physics Bottle" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				97DBF87E1A9F9C010004487C /* Debug */,
-				97DBF87F1A9F9C010004487C /* Release */,
+				97D421B51A9FA47700E9C55E /* Debug */,
+				97D421B61A9FA47700E9C55E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		97D421B71A9FA47700E9C55E /* Build configuration list for PBXNativeTarget "Physics BottleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				97D421B81A9FA47700E9C55E /* Debug */,
+				97D421B91A9FA47700E9C55E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 97DBF8521A9F9C010004487C /* Project object */;
+	rootObject = 97D421891A9FA47700E9C55E /* Project object */;
 }
