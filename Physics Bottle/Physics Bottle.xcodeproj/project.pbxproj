@@ -8,13 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		97DBF8601A9F9C010004487C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97DBF85F1A9F9C010004487C /* AppDelegate.swift */; };
-		97DBF8621A9F9C010004487C /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 97DBF8611A9F9C010004487C /* GameScene.sks */; };
 		97DBF8641A9F9C010004487C /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97DBF8631A9F9C010004487C /* GameScene.swift */; };
 		97DBF8661A9F9C010004487C /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97DBF8651A9F9C010004487C /* GameViewController.swift */; };
 		97DBF8691A9F9C010004487C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97DBF8671A9F9C010004487C /* Main.storyboard */; };
 		97DBF86B1A9F9C010004487C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97DBF86A1A9F9C010004487C /* Images.xcassets */; };
 		97DBF86E1A9F9C010004487C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 97DBF86C1A9F9C010004487C /* LaunchScreen.xib */; };
-		97DBF87A1A9F9C010004487C /* Physics_BottleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97DBF8791A9F9C010004487C /* Physics_BottleTests.swift */; };
+		97DBF8861A9F9E230004487C /* ball.png in Resources */ = {isa = PBXBuildFile; fileRef = 97DBF8841A9F9E230004487C /* ball.png */; };
+		97DBF8871A9F9E230004487C /* bottle.png in Resources */ = {isa = PBXBuildFile; fileRef = 97DBF8851A9F9E230004487C /* bottle.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,15 +31,14 @@
 		97DBF85A1A9F9C010004487C /* Physics Bottle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Physics Bottle.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		97DBF85E1A9F9C010004487C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		97DBF85F1A9F9C010004487C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		97DBF8611A9F9C010004487C /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 		97DBF8631A9F9C010004487C /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		97DBF8651A9F9C010004487C /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		97DBF8681A9F9C010004487C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		97DBF86A1A9F9C010004487C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		97DBF86D1A9F9C010004487C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		97DBF8731A9F9C010004487C /* Physics BottleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Physics BottleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		97DBF8781A9F9C010004487C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		97DBF8791A9F9C010004487C /* Physics_BottleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Physics_BottleTests.swift; sourceTree = "<group>"; };
+		97DBF8841A9F9E230004487C /* ball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ball.png; sourceTree = "<group>"; };
+		97DBF8851A9F9E230004487C /* bottle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bottle.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,7 +63,6 @@
 			isa = PBXGroup;
 			children = (
 				97DBF85C1A9F9C010004487C /* Physics Bottle */,
-				97DBF8761A9F9C010004487C /* Physics BottleTests */,
 				97DBF85B1A9F9C010004487C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -81,8 +79,8 @@
 		97DBF85C1A9F9C010004487C /* Physics Bottle */ = {
 			isa = PBXGroup;
 			children = (
+				97DBF8831A9F9E230004487C /* images */,
 				97DBF85F1A9F9C010004487C /* AppDelegate.swift */,
-				97DBF8611A9F9C010004487C /* GameScene.sks */,
 				97DBF8631A9F9C010004487C /* GameScene.swift */,
 				97DBF8651A9F9C010004487C /* GameViewController.swift */,
 				97DBF8671A9F9C010004487C /* Main.storyboard */,
@@ -101,21 +99,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		97DBF8761A9F9C010004487C /* Physics BottleTests */ = {
+		97DBF8831A9F9E230004487C /* images */ = {
 			isa = PBXGroup;
 			children = (
-				97DBF8791A9F9C010004487C /* Physics_BottleTests.swift */,
-				97DBF8771A9F9C010004487C /* Supporting Files */,
+				97DBF8841A9F9E230004487C /* ball.png */,
+				97DBF8851A9F9E230004487C /* bottle.png */,
 			);
-			path = "Physics BottleTests";
-			sourceTree = "<group>";
-		};
-		97DBF8771A9F9C010004487C /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				97DBF8781A9F9C010004487C /* Info.plist */,
-			);
-			name = "Supporting Files";
+			path = images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,8 +189,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				97DBF86E1A9F9C010004487C /* LaunchScreen.xib in Resources */,
+				97DBF8861A9F9E230004487C /* ball.png in Resources */,
 				97DBF86B1A9F9C010004487C /* Images.xcassets in Resources */,
-				97DBF8621A9F9C010004487C /* GameScene.sks in Resources */,
+				97DBF8871A9F9E230004487C /* bottle.png in Resources */,
 				97DBF8691A9F9C010004487C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -229,7 +220,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				97DBF87A1A9F9C010004487C /* Physics_BottleTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,6 +403,7 @@
 				97DBF87F1A9F9C010004487C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		97DBF8801A9F9C010004487C /* Build configuration list for PBXNativeTarget "Physics BottleTests" */ = {
 			isa = XCConfigurationList;
@@ -421,6 +412,7 @@
 				97DBF8821A9F9C010004487C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
