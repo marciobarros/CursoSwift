@@ -36,7 +36,6 @@
 		97DBF8681A9F9C010004487C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		97DBF86A1A9F9C010004487C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		97DBF86D1A9F9C010004487C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		97DBF8731A9F9C010004487C /* Physics BottleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Physics BottleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		97DBF8841A9F9E230004487C /* ball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ball.png; sourceTree = "<group>"; };
 		97DBF8851A9F9E230004487C /* bottle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bottle.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -71,7 +70,6 @@
 			isa = PBXGroup;
 			children = (
 				97DBF85A1A9F9C010004487C /* Physics Bottle.app */,
-				97DBF8731A9F9C010004487C /* Physics BottleTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -128,24 +126,6 @@
 			productReference = 97DBF85A1A9F9C010004487C /* Physics Bottle.app */;
 			productType = "com.apple.product-type.application";
 		};
-		97DBF8721A9F9C010004487C /* Physics BottleTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 97DBF8801A9F9C010004487C /* Build configuration list for PBXNativeTarget "Physics BottleTests" */;
-			buildPhases = (
-				97DBF86F1A9F9C010004487C /* Sources */,
-				97DBF8701A9F9C010004487C /* Frameworks */,
-				97DBF8711A9F9C010004487C /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				97DBF8751A9F9C010004487C /* PBXTargetDependency */,
-			);
-			name = "Physics BottleTests";
-			productName = "Physics BottleTests";
-			productReference = 97DBF8731A9F9C010004487C /* Physics BottleTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -160,7 +140,6 @@
 					};
 					97DBF8721A9F9C010004487C = {
 						CreatedOnToolsVersion = 6.1.1;
-						TestTargetID = 97DBF8591A9F9C010004487C;
 					};
 				};
 			};
@@ -178,7 +157,6 @@
 			projectRoot = "";
 			targets = (
 				97DBF8591A9F9C010004487C /* Physics Bottle */,
-				97DBF8721A9F9C010004487C /* Physics BottleTests */,
 			);
 		};
 /* End PBXProject section */
@@ -350,40 +328,6 @@
 			};
 			name = Release;
 		};
-		97DBF8811A9F9C010004487C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "Physics BottleTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Physics Bottle.app/Physics Bottle";
-			};
-			name = Debug;
-		};
-		97DBF8821A9F9C010004487C /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "Physics BottleTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Physics Bottle.app/Physics Bottle";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -401,15 +345,6 @@
 			buildConfigurations = (
 				97DBF87E1A9F9C010004487C /* Debug */,
 				97DBF87F1A9F9C010004487C /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		97DBF8801A9F9C010004487C /* Build configuration list for PBXNativeTarget "Physics BottleTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				97DBF8811A9F9C010004487C /* Debug */,
-				97DBF8821A9F9C010004487C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
