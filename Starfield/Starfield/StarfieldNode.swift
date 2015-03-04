@@ -130,8 +130,8 @@ class Star {
 	
 	// Initializes the star in a random position
 	init(width: CGFloat, height: CGFloat) {
-		self.x = width * CGFloat.random()
-		self.y = height * CGFloat.random()
+		self.x = width * CGFloat(Float(arc4random()) / Float(UINT32_MAX))
+		self.y = height * CGFloat(Float(arc4random()) / Float(UINT32_MAX))
 	}
 
 	// Moves the star by a certain degree
