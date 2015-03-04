@@ -19,10 +19,12 @@ class PlayScene: SKScene {
 	var startGameTime : NSTimeInterval!
 	var scoreLabel : SKLabelNode!
 	var gravityLabel : SKLabelNode!
-	var frictionLabel : SKLabelNode!
 	var currentRadius = CGFloat(0)
 	var gamePaused = false
 
+	/*
+	 * Prepare the components of the scene
+	 */
     override func didMoveToView(view: SKView) {
 		backgroundColor = UIColor.blackColor()
 		physicsWorld.gravity = CGVectorMake(0.0, 0.1)
@@ -39,6 +41,9 @@ class PlayScene: SKScene {
 		createDataPanel(view)
     }
 
+	/*
+	 * Creates the shape that represents the globe
+	 */
 	func createGlobe(view: SKView) {
 		currentRadius = view.bounds.height * 0.45
 		globeNode = SKShapeNode(circleOfRadius: currentRadius)
@@ -50,6 +55,9 @@ class PlayScene: SKScene {
 		self.addChild(globeNode)
 	}
 
+	/*
+	 * Creates the sprite for the good god
+	 */
 	func createNiceGod(view: SKView) {
 		niceGodNode = SKSpriteNode(imageNamed: "niceGod")
 		niceGodNode.position = CGPointMake(view.bounds.width + 10.0, -10.0)
@@ -58,6 +66,9 @@ class PlayScene: SKScene {
 		self.addChild(niceGodNode)
 	}
 
+	/*
+	 * Creates the sprite for the cruel gog
+	 */
 	func createCruelGod(view: SKView) {
 		cruelGodNode = SKSpriteNode(imageNamed: "cruelGod")
 		cruelGodNode.position = CGPointMake(view.bounds.width, 0)
@@ -67,6 +78,9 @@ class PlayScene: SKScene {
 		self.addChild(cruelGodNode)
 	}
 	
+	/*
+	 * Creates the sprite and physical manifestation of the ship
+	 */
 	func createSpaceship(view: SKView) {
 		spaceshipNode = SKSpriteNode(imageNamed: "Spaceship")
 		spaceshipNode.anchorPoint = CGPointMake(0.5, 0.5)
@@ -81,6 +95,9 @@ class PlayScene: SKScene {
 		spaceshipNode.physicsBody = borderBody
 	}
 	
+	/*
+	 * Creates a data panel presenting the gravity
+	 */
 	func createDataPanel(view: SKView) {
 		let scoreTitleLabel = SKLabelNode(fontNamed: "Arial-BoldMT")
 		scoreTitleLabel.text = "Score:"
@@ -109,24 +126,13 @@ class PlayScene: SKScene {
 		gravityLabel.fontSize = 10
 		gravityLabel.position = CGPointMake(view.bounds.width * 0.85, view.bounds.height * 0.85)
 		addChild(gravityLabel)
-
-		let frictionTitleLabel = SKLabelNode(fontNamed: "Arial-BoldMT")
-		frictionTitleLabel.text = "Friction:"
-		frictionTitleLabel.fontColor = UIColor.yellowColor()
-		frictionTitleLabel.fontSize = 14
-		frictionTitleLabel.position = CGPointMake(view.bounds.width * 0.85, view.bounds.height * 0.7)
-		addChild(frictionTitleLabel)
 		
-		frictionLabel = SKLabelNode(fontNamed: "Arial")
-		frictionLabel.text = "50%"
-		frictionLabel.fontColor = UIColor.whiteColor()
-		frictionLabel.fontSize = 10
-		frictionLabel.position = CGPointMake(view.bounds.width * 0.85, view.bounds.height * 0.65)
-		addChild(frictionLabel)
-		
-		updatePhysicsLabels()
+		updateGravityLabels()
 	}
 	
+	/*
+	 * Applies an impulse to the ship according to its position and a touch
+	 */
     override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
         for touch: AnyObject in touches {
             let location = touch.locationInNode(self)
@@ -148,41 +154,38 @@ class PlayScene: SKScene {
 			}
 		
 			spaceshipNode.zRotation = -horizontalImpulse * CGFloat(M_PI) * (2.0 - verticalImpulse) / 4
-			
 			spaceshipNode.physicsBody?.applyImpulse(CGVectorMake(horizontalImpulse, verticalImpulse))
         }
     }
 	
+	/*
+	 * Shows the bad guy, hiding the good one
+	 */
 	func showCruelGod() {
 		cruelGodNode.alpha = 1.0
 		niceGodNode.alpha = 0.0
 	}
 	
+	/*
+	 * Shows the nice guy, hiding the cruel one
+	 */
 	func showNiceGod() {
 		cruelGodNode.alpha = 0.0
 		niceGodNode.alpha = 1.0
 	}
-	
-	func randomizePhysics() {
-		var verticalGravity = CGFloat.random() - 0.5
-		var horizontalGravity = CGFloat.random() - 0.5
-		physicsWorld.gravity = CGVectorMake(horizontalGravity, verticalGravity)
-		
-		var friction = CGFloat.random()
-		spaceshipNode.physicsBody?.friction = friction
-		
-		updatePhysicsLabels()
-	}
-	
-	func updatePhysicsLabels() {
+
+	/*
+	 * Updates gravity in the data panel
+	 */
+	func updateGravityLabels() {
 		var dx = physicsWorld.gravity.dx
 		var dy = physicsWorld.gravity.dy
 		gravityLabel.text = NSString(format: "%.0f%%, %.0f%%", Double(dx) * 100, Double(dy) * 100)
-		
-		var friction = spaceshipNode.physicsBody?.friction
-		frictionLabel.text = NSString(format: "%.0f%%", Double(friction!) * 100)
 	}
 	
+	/*
+	 * Updates game state each time a frame is drawn
+	 */
 	override func update(currentTime: NSTimeInterval) {
 		if gamePaused {
 			return
@@ -199,6 +202,19 @@ class PlayScene: SKScene {
 		let score = currentTime - startGameTime
 		scoreLabel.text = NSString(format: "%.0f", score)
 		
+		updateGlobeRadius(score)
+		checkForCollision()
+		
+		if currentTime > nextTimeChanged {
+			nextTimeChanged = currentTime + 10.0 + Double(arc4random_uniform(15))
+			randomizeGravity()
+		}
+	}
+	
+	/*
+	 * Update the radius of the globe
+	 */
+	func updateGlobeRadius(score: Double) {
 		var newRadius = view!.bounds.height * 0.45 * (200.0 - CGFloat(score)) / 200.0
 		
 		if currentRadius - newRadius > 10 {
@@ -212,29 +228,22 @@ class PlayScene: SKScene {
 			globeNode.lineWidth = 2.0
 			self.addChild(globeNode)
 		}
-		
+	}
+	
+	/*
+	 * Checks if the spaceship has collided with the globe
+	 */
+	func checkForCollision() {
 		var distance = sqrt(pow(view!.bounds.height * 0.5 - spaceshipNode.position.x, 2) + pow(view!.bounds.height * 0.5 - spaceshipNode.position.y, 2))
 		
 		if (distance > currentRadius - 5) {
 			die()
-			return
-		}
-		
-		if currentTime > nextTimeChanged {
-			let this = self
-			showCruelGod()
-			
-			nextTimeChanged = currentTime + 10.0 + Double(arc4random_uniform(15))
-			randomizePhysics()
-
-			let waitAction = SKAction.waitForDuration(CFTimeInterval(2.0))
-			
-			spaceshipNode.runAction(waitAction, completion: {
-				this.showNiceGod()
-			});
 		}
 	}
 	
+	/*
+	 * Take actions when the spaceship collided
+	 */
     func die() {
 		gamePaused = true
 		spaceshipNode.removeAllActions()
@@ -246,16 +255,42 @@ class PlayScene: SKScene {
 		var alert = UIAlertController(title: "Game Over", message: "", preferredStyle: UIAlertControllerStyle.Alert)
 		
 		alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default) { _ in
-			self.spaceshipNode.position = CGPointMake(self.view!.bounds.height * 0.5, self.view!.bounds.height * 0.5)
-			self.nextTimeChanged = nil
-			self.startGameTime = nil
-			self.globeNode.removeFromParent()
-			self.createGlobe(self.view!)
-			self.spaceshipNode.alpha = 1.0
-			self.spaceshipNode.physicsBody?.dynamic = true
-			self.gamePaused = false
+			self.restart()
 		})
 			
 		self.view?.window?.rootViewController?.presentViewController(alert, animated: true, completion: nil)
-   }
+	}
+	
+	/*
+	 * Randomizes the direction and intensity of gravity in space
+	 */
+	func randomizeGravity() {
+		let this = self
+		showCruelGod()
+		
+		var verticalGravity = CGFloat.random() - 0.5
+		var horizontalGravity = CGFloat.random() - 0.5
+		physicsWorld.gravity = CGVectorMake(horizontalGravity, verticalGravity)
+		updateGravityLabels()
+
+		let waitAction = SKAction.waitForDuration(CFTimeInterval(2.0))
+		
+		spaceshipNode.runAction(waitAction, completion: {
+			this.showNiceGod()
+		});
+	}
+
+	/*
+	 * Restarts the game
+	 */
+    func restart() {
+		spaceshipNode.position = CGPointMake(view!.bounds.height * 0.5, view!.bounds.height * 0.5)
+		nextTimeChanged = nil
+		startGameTime = nil
+		globeNode.removeFromParent()
+		createGlobe(self.view!)
+		spaceshipNode.alpha = 1.0
+		spaceshipNode.physicsBody?.dynamic = true
+		gamePaused = false
+	}
 }
