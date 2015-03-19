@@ -22,10 +22,11 @@ class TransitionFactory {
 
     class func createBackwardTransition() -> SKTransition {
 		//return SKTransition.pushWithDirection(.Left, duration: 1)
-		return SKTransition.revealWithDirection(.Left, duration: 1)
+		//return SKTransition.revealWithDirection(.Left, duration: 1)
 		//return SKTransition.flipVerticalWithDuration(1)
 		//return SKTransition.fadeWithColor(UIColor.redColor(), duration: 1)
 		//return SKTransition.doorsOpenVerticalWithDuration(1)
 		//return SKTransition.doorsCloseVerticalWithDuration(1)
+		return SKTransition.doorwayWithDuration(1)
 	}
 }
