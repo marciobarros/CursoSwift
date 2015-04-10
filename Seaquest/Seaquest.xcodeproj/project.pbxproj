@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		974CE0371A606BD700786A8F /* button-09.wav in Resources */ = {isa = PBXBuildFile; fileRef = 974CE0351A606BD700786A8F /* button-09.wav */; };
 		974CE0381A606BD700786A8F /* button-10.wav in Resources */ = {isa = PBXBuildFile; fileRef = 974CE0361A606BD700786A8F /* button-10.wav */; };
+		97AA1C0F1AD891BA0035513B /* HallOfTheMountainKing.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 97AA1C0E1AD891BA0035513B /* HallOfTheMountainKing.mp3 */; };
 		97D218D51A68549B00C98231 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D218D41A68549B00C98231 /* UIColor.swift */; };
 		97E4B9951A2660FF006203A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97E4B9941A2660FF006203A5 /* AppDelegate.swift */; };
 		97E4B9991A2660FF006203A5 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97E4B9981A2660FF006203A5 /* GameScene.swift */; };
@@ -33,6 +34,7 @@
 /* Begin PBXFileReference section */
 		974CE0351A606BD700786A8F /* button-09.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "button-09.wav"; sourceTree = "<group>"; };
 		974CE0361A606BD700786A8F /* button-10.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "button-10.wav"; sourceTree = "<group>"; };
+		97AA1C0E1AD891BA0035513B /* HallOfTheMountainKing.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = HallOfTheMountainKing.mp3; sourceTree = "<group>"; };
 		97D218D41A68549B00C98231 /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		97E4B98F1A2660FF006203A5 /* Seaquest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Seaquest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		97E4B9931A2660FF006203A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 		974CE0341A606BD700786A8F /* sounds */ = {
 			isa = PBXGroup;
 			children = (
+				97AA1C0E1AD891BA0035513B /* HallOfTheMountainKing.mp3 */,
 				974CE0351A606BD700786A8F /* button-09.wav */,
 				974CE0361A606BD700786A8F /* button-10.wav */,
 			);
@@ -215,6 +218,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				97AA1C0F1AD891BA0035513B /* HallOfTheMountainKing.mp3 in Resources */,
 				974CE0381A606BD700786A8F /* button-10.wav in Resources */,
 				974CE0371A606BD700786A8F /* button-09.wav in Resources */,
 				97E4B9A31A2660FF006203A5 /* LaunchScreen.xib in Resources */,

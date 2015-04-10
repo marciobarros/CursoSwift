@@ -7,17 +7,25 @@
 //
 
 import UIKit
+import AVFoundation
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+	var audioPlayer: AVAudioPlayer!
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+		var error : NSError?
+		var path = NSBundle.mainBundle().pathForResource("HallOfTheMountainKing", ofType: "mp3")
+		var url = NSURL.fileURLWithPath(path!)
+		audioPlayer = AVAudioPlayer(contentsOfURL: url, error: &error)
+		audioPlayer.numberOfLoops = -1
+		audioPlayer.volume = 1.0
+		//audioPlayer.play()
         return true
     }
-
+ 
     func applicationWillResignActive(application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
